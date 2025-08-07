@@ -247,6 +247,22 @@ if 'data_summary' not in st.session_state:
     st.session_state.data_summary = None
 
 def main():
+    # Initialize session state variables
+    if 'data_loaded' not in st.session_state:
+        st.session_state.data_loaded = False
+    if 'data' not in st.session_state:
+        st.session_state.data = None
+    if 'data_loader' not in st.session_state:
+        st.session_state.data_loader = None
+    if 'data_summary' not in st.session_state:
+        st.session_state.data_summary = None
+    if 'model_trained' not in st.session_state:
+        st.session_state.model_trained = False
+    if 'model' not in st.session_state:
+        st.session_state.model = None
+    if 'training_results' not in st.session_state:
+        st.session_state.training_results = None
+    
     # Header with enhanced styling
     st.markdown('<h1 class="main-header">🌊 Flood Prediction Analytics</h1>', unsafe_allow_html=True)
     st.markdown('<p style="text-align: center; color: #a8b2d1; font-size: 1.2rem; margin-bottom: 2rem;">Advanced Machine Learning for Flood Risk Assessment</p>', unsafe_allow_html=True)
